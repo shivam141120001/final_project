@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<div class="container">
+  <div class="row">
+    <h1 class="page-title">Get Customer Details assigned to an Executive</h1>
+  </div>
+  <div class="row">
+    <table class="table table-hover" *ngIf="customers.length">
+      <caption>
+        List of Customers
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Customer Id</th>
+          <th scope="col">Property Type</th>
+          <th scope="col">Locality</th>
+          <th scope="col">Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <th scope="row">{{ customer?.customerId }}</th>
+          <td>{{ customer?.name }}</td>
+          <td>{{ customer?.address }}</td>
+          <td>{{ customer?.emailId }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

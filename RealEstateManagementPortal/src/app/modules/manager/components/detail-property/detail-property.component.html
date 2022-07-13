@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <h1 class="page-title">Get Property Details</h1>
+    <div class="col-md-5">
+      <form
+        #demoForm="ngForm"
+        [formGroup]="form"
+        (ngSubmit)="getPropertyDetails()"
+      >
+        <!-- ExecutiveId -->
+        <div class="form-group">
+          <label for="locality">Locality</label>
+          <input
+            formControlName="locality"
+            id="locality"
+            type="text"
+            class="form-control"
+          />
+          <div
+            *ngIf="f.locality.touched && f.locality.invalid"
+            class="alert alert-danger"
+          >
+            <div *ngIf="f.locality.errors && f.locality.errors.required">
+              Locality is required.
+            </div>
+          </div>
+        </div>
+
+        <button
+          [disabled]="!demoForm.form.valid"
+          class="btn btn-primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="row" *ngIf="properties">
+    <table class="table table-hover" *ngIf="properties.length">
+      <caption>
+        List of Properties
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Property Id</th>
+          <th scope="col">Property Type</th>
+          <th scope="col">Locality</th>
+          <th scope="col">Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let property of properties">
+          <th scope="row">{{ property?.propertyId }}</th>
+          <td>{{ property?.propertyType }}</td>
+          <td>{{ property?.locality }}</td>
+          <td>{{ property?.budget }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

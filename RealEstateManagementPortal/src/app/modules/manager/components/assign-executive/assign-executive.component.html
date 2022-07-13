@@ -1,0 +1,79 @@
+
+<div class="for-bg">
+
+
+  <div class="blog-item blog-item-add">
+    <a class="bg-for">
+        <div class="content con">
+          <div class="icon icon-c">
+            <img class="image-img"
+            src="./assets/assign-executive-2.jpg" alt="">
+          </div>
+            
+            
+            <form class="form-inline" >
+              
+              <div class="title" style="margin-left: 20px;">Assign Executive to customer</div>
+              
+            </form>
+            <div class="icon icon-c">
+              <img class="image-img"
+              src="./assets/assign-executive-3.jpg" alt="">
+            </div>
+            
+            
+        </div>
+    </a>
+  
+  </div>
+  <div class="blog-item blog-item-add">
+    <a class="bg-for">
+        <div class="content con" >
+            <form #demoForm="ngForm"[formGroup]="form" (ngSubmit)="assignExecutiveToCustomer()">
+              <div class="form-row align-items-end">
+                
+                
+                <div class="col-auto">
+                  <label  for="inlineFormInput"><b class="blue">Choose Executive ID</b></label> 
+  
+                  <select
+                  id="inlineFormInput"
+                  [compareWith]="compareExecutive"
+                  formControlName="executive"
+                  class=" mb-2 id-input form-select form-select-lg "
+                  aria-label=".form-select-lg example"
+                >
+                  <!-- <option selected>Executive ID</option> -->
+                  <option *ngFor="let executive of executives" [ngValue]="executive">{{ executive.name }}</option>
+                  </select>
+                </div>
+
+                <div class="col-auto">
+                  <label  for="inlineFormInput"><b class="blue">Choose Customer ID</b></label>
+                <select id="inlineFormInput"
+                  [compareWith]="compareCustomer"
+                  formControlName="executive"
+                  class=" mb-2 id-input form-select form-select-lg"
+                  aria-label=".form-select-lg example"
+                >
+                  <!-- <option selected>Customer ID</option> -->
+                  <option *ngFor="let customer of customers" [ngValue]="customer">{{ customer.name }}</option>
+                </select>
+                        
+                    
+                    
+            
+                </div>
+                <div class="col-auto mb-2">
+                  <button type="submit" class=" btn md-2 btn-sub">Assign </button>
+                </div>
+              </div>
+            </form>
+            
+            
+        </div>
+    </a>
+
+  </div>
+</div>
+  

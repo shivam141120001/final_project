@@ -1,0 +1,136 @@
+.header{
+    background: #707ee7 ;
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: aliceblue;
+    line-height: 1.2;
+    font-weight: unset!important;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+.rowTable{
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: rgb(132, 140, 146);
+    line-height: 1.2;
+    font-weight: unset!important;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin-ext');
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.blog-item .a {
+    display: flex;
+    padding: 50px 0 ;
+    overflow: hidden;
+    align-items: center;
+    max-width: 1000px;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 50px 0;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    width:100%;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blog-item .a:hover {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.4);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.blog-item .icon {
+    object-fit: cover;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 15px 26px rgba(0, 0, 0, 0.4);
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.blog-item .content {
+    width: 75%;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .blog-item .content {
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .blog-item .content .title {
+        font-size: 18px;
+    }
+
+    .blog-item .item-arrow {
+        margin: auto;
+    }
+
+    .blog-item .icon {
+        width: 100%;
+    }
+
+
+    .blog-item {
+        width: 92%;
+        margin: auto;
+    }
+
+    .blog-item .a {
+        display: block;
+        padding: 30px;
+    }
+}
+
+.con{
+    display :flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-c{
+    overflow: hidden;
+    border-radius: 100px !important;
+    padding: 0;    
+}
+
+
+/* ************************************************** */
+
+.for-bg{
+    padding-top: 100px;
+    background-image: url("../../../../../assets/wallpaperflare.com_wallpaper.jpg");
+    height: 660px;
+}
+
+.bg-for{
+    background-color: whitesmoke;
+    justify-content: space-around;
+}
+
+.dark-prop{
+    margin-top: 30px;
+    background-color: rgb(208, 236, 246);
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    border-radius: 6px;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+}

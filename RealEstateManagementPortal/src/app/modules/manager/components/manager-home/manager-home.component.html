@@ -1,0 +1,16 @@
+<ul>
+  <li *ngFor="let route of routes">
+    <a
+      class="component-link"
+      routerLink="{{ route }}"
+      routerLinkActive="active-component"
+    >
+      {{
+        route
+          .replace("/", " ")
+          .replace("/", " ")
+          .replace("-", " ") | titlecase
+      }}
+    </a>
+  </li>
+</ul>
